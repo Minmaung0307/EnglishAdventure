@@ -51,3 +51,20 @@ If you already have a git repository, **do not run `git init` or overwrite `.git
 ## Next milestone
 
 Refactor into React + TypeScript components, move lessons into JSON, add validated offline assets, and then opt-in Firebase Authentication + private Firestore progress sync only if necessary. Avoid any unbounded AI usage.
+
+
+## v0.3 PWA upgrade
+- SVG favicon, PNG 192/512 install icons, web app manifest, service worker, install dialog.
+- Android/Chromium: use Install button when supported. iOS: Safari > Share > Add to Home Screen.
+- Offline app shell caches only static resources. No Firebase Auth, Firestore, Storage, Functions or Analytics calls. Local progress remains device-specific.
+- Firebase project configured: `english-mm`. The Firebase web config is public identification, not an admin secret. Never commit service account keys.
+
+```bash
+npm install
+npm run build
+firebase deploy --only hosting --project english-mm
+```
+
+**Cost:** Firebase Spark plan has no charges within its quotas, but it has usage limits. Hosting bandwidth/storage may exceed no-cost limits and then become unavailable; avoid enabling billing/Blaze or paid AI APIs if a strict $0 cap is required. Custom domain renewal is separate.
+
+**Important:** Copy this project over your existing files but preserve `.git` and any custom work. Test install in HTTPS deployed site (not `file://`). Update cache version in `public/sw.js` when changing cached assets.
