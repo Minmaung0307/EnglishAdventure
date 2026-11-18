@@ -39,3 +39,7 @@ Run `npm ci && npm run build`; then test profile save/export/import, level cards
 - Updated hover/focus/reduced-motion treatments and incremented the offline service-worker cache to v8.
 - Kept all existing lessons, guest profile, XP, mission, audio and Firebase Hosting behavior unchanged.
 - This update does **not** add real MP4 videos or claim new lessons. Those need separately produced/licensed assets and reviewed teaching content.
+
+
+## v0.9 Guided Dialogue Expansion
+Every existing lesson now offers a four-turn contextual sample dialogue, tap-to-listen lines, extracted vocabulary pronunciation, slow playback, and an open-ended speaking prompt. Dialogue lines are generated from the existing lesson's sample phrase and a small context-based template; they are **practice examples**, not 80 individually authored scripts. Voice playback uses the browser speech engine. Speech recognition may not work offline or in all browsers. No paid AI service or Firestore is required.
