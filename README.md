@@ -1,3 +1,34 @@
+# English Adventure USA v0.5 — Academy Expansion
+
+This release extends the v0.4 prototype without changing the Firebase Spark hosting architecture.
+
+## New
+- 40 guided sample lessons: five per level, across Starter, Beginner, Elementary, Intermediate, Upper Intermediate, Advanced, Expert and Pro.
+- Level-filtered Academy navigation and level selection from the Home page.
+- Autosave writing drafts on input (local browser storage only).
+- Updated offline app-shell cache and interactive UI transitions.
+
+## Important limits
+- The lessons are guided prototypes, not a complete 540-lesson curriculum.
+- Speech recognition is browser-dependent and is not pronunciation grading.
+- Text-to-speech uses browser voices, not licensed American-accent audio files.
+- Student progress is stored on this browser, not synced to Firebase.
+- No paid AI services, Firestore writes, Storage uploads or Functions are used.
+- The screenshot images are not bundled; original SVG art is retained to avoid rights issues.
+
+## Run
+```bash
+npm install
+npm run dev
+npm run build
+firebase deploy --only hosting --project english-mm
+```
+
+## Git
+Preserve your existing `.git` folder, back up the current project, copy these files over it, then commit and push.
+
+---
+
 # English Adventure USA — GitHub + Firebase (no-cost-first)
 
 This package preserves the existing interactive HTML prototype and adds a Vite build, GitHub CI, and Firebase Hosting configuration. **It is not yet a React/TypeScript conversion.** No paid AI or database services are enabled.
