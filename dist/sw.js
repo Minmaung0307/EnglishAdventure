@@ -1,5 +1,5 @@
 /* App shell only; no Firebase user data or API responses cached. */
-const CACHE='english-adventure-shell-v7';
+const CACHE='english-adventure-shell-v8';
 const SHELL=['/','/index.html','/style.css','/app.js','/manifest.webmanifest','/icons/icon.svg','/icons/icon-192.png','/icons/icon-512.png','/art/city.svg','/art/listen.svg','/art/read.svg','/art/write.svg','/art/speak.svg','/art/levels/level-1.svg','/art/levels/level-2.svg','/art/levels/level-3.svg','/art/levels/level-4.svg','/art/levels/level-5.svg','/art/levels/level-6.svg','/art/levels/level-7.svg','/art/levels/level-8.svg'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(c=>c.addAll(SHELL)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('english-adventure-shell-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()))});

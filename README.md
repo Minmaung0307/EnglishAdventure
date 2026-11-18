@@ -32,3 +32,10 @@ Back up the current project and preserve your `.git` directory before replacing 
 
 ### Checks
 Run `npm ci && npm run build`; then test profile save/export/import, level cards, lessons, missions and offline PWA. Do not overwrite `.git` or existing local data.
+
+
+## v0.8 illustration refresh
+- Replaced all eight level illustrations with eight unique **people-free** illustrated scenes: welcome skyline, cafe, city navigation, workplace charts, discovery books, professional growth, microphone/podium, and leadership hall.
+- Updated hover/focus/reduced-motion treatments and incremented the offline service-worker cache to v8.
+- Kept all existing lessons, guest profile, XP, mission, audio and Firebase Hosting behavior unchanged.
+- This update does **not** add real MP4 videos or claim new lessons. Those need separately produced/licensed assets and reviewed teaching content.
