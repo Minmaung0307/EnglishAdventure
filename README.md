@@ -68,3 +68,15 @@ firebase deploy --only hosting --project english-mm
 **Cost:** Firebase Spark plan has no charges within its quotas, but it has usage limits. Hosting bandwidth/storage may exceed no-cost limits and then become unavailable; avoid enabling billing/Blaze or paid AI APIs if a strict $0 cap is required. Custom domain renewal is separate.
 
 **Important:** Copy this project over your existing files but preserve `.git` and any custom work. Test install in HTTPS deployed site (not `file://`). Update cache version in `public/sw.js` when changing cached assets.
+
+
+## v0.4 expanded demo
+- Eight playable level samples (Starter through Pro), each with listening, reading, writing, speaking, quiz and real-life mission entry.
+- 24 guided location missions with context-specific prompts.
+- Original locally bundled SVG illustrations for the four skills and city.
+- Smooth hover/tap/page transitions, with reduced-motion accessibility support.
+- Existing Firebase Hosting, PWA, service worker, and browser-local progress retained.
+- No paid API, Firestore or Storage required.
+- This is an expanded prototype, **not** a finished 540-lesson curriculum or AI voice tutor.
+
+Deploy: `npm install && npm run build && firebase deploy --only hosting --project english-mm`
